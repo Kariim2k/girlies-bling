@@ -20,12 +20,20 @@ export default function About() {
             About {brand.name}
           </h2>
           <p className="mt-4 text-stone-600">
-            Write two or three honest sentences here: who the vendor is, how
-            they started, and what makes the pieces special. Real details beat
-            generic copy every time.
+            Girlies_Bling was born from a love for jewellery that adds a little
+            extra magic to the way a woman expresses herself. We handpick pieces
+            that balance feminine charm with understated luxury, bringing
+            together styles that feel beautiful, versatile, and worth reaching
+            for again and again. Every piece is chosen to help you make a
+            statement, whether subtle or bold, without ever losing your personal
+            touch.
           </p>
           <p className="mt-3 text-stone-600">
-            Add a line about quality, sourcing, or delivery to build trust.
+            At Girlies_Bling, every piece is thoughtfully selected with an eye
+            for quality, detail, and lasting appeal. We want you to shop with
+            confidence, knowing that each order is handled with care and
+            delivered with the same attention to detail that went into choosing
+            your jewellery.
           </p>
         </div>
       </div>
