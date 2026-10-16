@@ -37,7 +37,6 @@ export function CartProvider({ children }) {
         },
       ];
     });
-    setCartOpen(true);
   };
 
   const changeQty = (id, delta) =>

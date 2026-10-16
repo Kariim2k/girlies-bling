@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "motion/react";
 import { Search, ShoppingBag, Menu, X } from "lucide-react";
 import { brand, navLinks } from "../data";
 import { useCart } from "../context/CartContext";
@@ -62,9 +63,15 @@ export default function Navbar() {
             >
               <ShoppingBag size={20} />
               {count > 0 && (
-                <span className="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-amber-700 text-[10px] text-white">
+                <motion.span
+                  key={count}
+                  initial={{ scale: 1.6 }}
+                  animate={{ scale: 1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                  className="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-amber-700 text-[10px] text-white"
+                >
                   {count}
-                </span>
+                </motion.span>
               )}
             </button>
             <button
