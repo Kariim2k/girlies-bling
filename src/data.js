@@ -25,27 +25,35 @@ export const formatPrice = (n) =>
 export const products = [
   {
     id: 1,
-    name: "Gold Hoop Earrings",
-    price: 15000,
-    image: "/products/hoops.jpg",
+    name: "Stud Earrings",
+    price: 7499,
+    image: "/products/earrings/Stud-Earrings.jpeg",
+    gallery: [
+      "/products/earrings/Stud-Earrings-1.jpeg",
+      "/products/earrings/Stud-Earrings-2.jpeg",
+    ],
   },
   {
     id: 2,
-    name: "Beaded Necklace",
+    name: "Casio Wristwatch Set",
     price: 21999,
-    image: "/products/necklace.jpg",
+    image: "/products/wristwatches/Casio-Wristwatch-Set.jpeg",
+    gallery: [
+      "/products/wristwatches/Casio-Wristwatch-Set-1.jpeg",
+      "/products/wristwatches/Casio-Wristwatch-Set-2.jpeg",
+    ],
   },
   {
     id: 3,
     name: "Chunky Bracelet",
     price: 16999,
-    image: "/products/chunky bracelet.jpeg",
+    image: "/products/bracelets/chunky bracelet.jpeg",
   },
   {
     id: 4,
     name: "Zirconia Proposal Ring",
     price: 25000,
-    image: "/products/zirconia ring.jpeg",
+    image: "/products/rings/zirconia ring.jpeg",
   },
 ];
 

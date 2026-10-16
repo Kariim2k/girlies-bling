@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { motion } from "motion/react";
+import ProductModal from "./ProductModal";
 import { products, formatPrice } from "../data";
 import { useCart } from "../context/CartContext";
 
 export default function Products() {
   const { addItem } = useCart();
+  const [selected, setSelected] = useState(null);
   return (
     <section id="shop" className="px-6 py-20 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -24,14 +27,23 @@ export default function Products() {
               transition={{ duration: 0.5, delay: (index % 4) * 0.08 }}
               className="group"
             >
-              <div className="aspect-square overflow-hidden rounded-xl bg-stone-100">
+              <button
+                onClick={() => setSelected(item)}
+                aria-label={`View ${item.name}`}
+                className="relative block aspect-square w-full overflow-hidden rounded-xl bg-stone-100"
+              >
                 <img
                   src={item.image}
                   alt={item.name}
                   loading="lazy"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
-              </div>
+                {item.gallery?.length > 0 && (
+                  <span className="absolute bottom-2 right-2 rounded-full bg-black/60 px-2 py-0.5 text-xs text-white">
+                    {item.gallery.length + 1} photos
+                  </span>
+                )}
+              </button>
               <h3 className="mt-3 text-sm md:text-base text-stone-900">
                 {item.name}
               </h3>
@@ -48,6 +60,13 @@ export default function Products() {
           ))}
         </div>
       </div>
+      {selected && (
+        <ProductModal
+          key={selected.id}
+          product={selected}
+          onClose={() => setSelected(null)}
+        />
+      )}
     </section>
   );
 }
