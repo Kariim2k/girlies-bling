@@ -53,7 +53,7 @@ export default function Hero() {
           Handpicked pieces, delivered nationwide. Order in minutes on WhatsApp.
         </p>
         <motion.a
-          href="#shop"
+          href="#collections"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}

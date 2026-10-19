@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { Search, ShoppingBag, Menu, X } from "lucide-react";
 import { brand, navLinks } from "../data";
 import { useCart } from "../context/CartContext";
@@ -15,8 +16,8 @@ export default function Navbar() {
       <header className="sticky top-0 z-40 border-b border-stone-200 bg-white/90 backdrop-blur">
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
           {/* Logo + clickable brand name */}
-          <a
-            href="#home"
+          <Link
+            to="/"
             onClick={() => setOpen(false)}
             className="flex items-center gap-2"
           >
@@ -31,18 +32,18 @@ export default function Navbar() {
             <span className="font-serif text-xl text-stone-900">
               {brand.name}
             </span>
-          </a>
+          </Link>
 
           {/* Desktop links */}
           <ul className="hidden items-center gap-8 md:flex">
             {navLinks.map((l) => (
               <li key={l.label}>
-                <a
-                  href={l.href}
+                <Link
+                  to={l.to}
                   className="text-sm text-stone-600 transition hover:text-amber-700"
                 >
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -90,13 +91,13 @@ export default function Navbar() {
           <ul className="border-t border-stone-200 bg-white px-6 py-4 md:hidden">
             {navLinks.map((l) => (
               <li key={l.label}>
-                <a
-                  href={l.href}
+                <Link
+                  to={l.to}
                   onClick={() => setOpen(false)}
                   className="block py-3 text-stone-700"
                 >
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

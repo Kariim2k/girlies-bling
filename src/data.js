@@ -1,3 +1,5 @@
+export const slugify = (s) => s.toLowerCase().trim().replace(/\s+/g, "-");
+
 export const brand = {
   name: "Girlies_Bling",
   logo: "", // e.g. '/logo.png' once you have it, put the file in /public
@@ -8,11 +10,11 @@ export const brand = {
 export const heroImages = ["/hero/1.png", "/hero/2.jpeg", "/hero/3.jpeg"];
 
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Shop", href: "#shop" },
-  { label: "Collections", href: "#collections" },
-  { label: "About Us", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", to: "/" },
+  { label: "Shop", to: "/shop" },
+  { label: "Collections", to: "/#collections" },
+  { label: "About Us", to: "/#about" },
+  { label: "Contact", to: "/#contact" },
 ];
 
 export const formatPrice = (n) =>
@@ -35,12 +37,12 @@ export const products = [
   },
   {
     id: 2,
-    name: "Casio Wristwatch Set",
-    price: 21999,
-    image: "/products/wristwatches/Casio-Wristwatch-Set.jpeg",
+    name: "Naidu lady’s wristwatch",
+    price: 29999,
+    image: "/products/wristwatches/Naidu-lady’s-wristwatch.jpeg",
     gallery: [
-      "/products/wristwatches/Casio-Wristwatch-Set-1.jpeg",
-      "/products/wristwatches/Casio-Wristwatch-Set-2.jpeg",
+      "/products/wristwatches/Naidu-lady’s-wristwatch-1.jpeg",
+      "/products/wristwatches/Naidu-lady’s-wristwatch-2.jpeg",
     ],
   },
   {

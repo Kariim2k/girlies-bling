@@ -1,4 +1,5 @@
 import { brand, navLinks, orderLink } from "../data";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -21,9 +22,9 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               {navLinks.map((l) => (
                 <li key={l.label}>
-                  <a href={l.href} className="transition hover:text-white">
+                  <Link to={l.to} className="transition hover:text-white">
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

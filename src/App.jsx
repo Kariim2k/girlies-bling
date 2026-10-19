@@ -1,21 +1,21 @@
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Products from "./components/Products";
-import Collections from "./components/Collections";
-import About from "./components/About";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import CartDrawer from "./components/CartDrawer";
+import ScrollToTop from "./components/ScrollToTop";
+import Home from "./pages/Home";
+import Shop from "./pages/Shop";
 
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
-      <Hero />
-      <Products />
-      <Collections />
-      <About />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/shop/:category" element={<Shop />} />
+      </Routes>
       <Footer />
       <CartDrawer />
     </>
