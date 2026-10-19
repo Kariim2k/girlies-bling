@@ -29,6 +29,7 @@ export const products = [
     id: 1,
     name: "Stud Earrings",
     price: 7499,
+    category: "Earrings",
     image: "/products/earrings/Stud-Earrings.jpeg",
     gallery: [
       "/products/earrings/Stud-Earrings-1.jpeg",
@@ -39,6 +40,7 @@ export const products = [
     id: 2,
     name: "Naidu lady’s wristwatch",
     price: 29999,
+    category: "Wristwatches",
     image: "/products/wristwatches/Naidu-lady’s-wristwatch.jpeg",
     gallery: [
       "/products/wristwatches/Naidu-lady’s-wristwatch-1.jpeg",
@@ -49,13 +51,38 @@ export const products = [
     id: 3,
     name: "Chunky Bracelet",
     price: 16999,
+    category: "Bracelets",
     image: "/products/bracelets/chunky bracelet.jpeg",
   },
   {
     id: 4,
     name: "Zirconia Proposal Ring",
     price: 25000,
+    category: "Rings",
     image: "/products/rings/zirconia ring.jpeg",
+  },
+
+  {
+    id: 5,
+    name: "Casio Wristwatch Set",
+    price: 34999,
+    category: "Sets",
+    image: "/products/sets/Casio-Wristwatch-Set.jpeg",
+    gallery: [
+      "/products/sets/Casio-Wristwatch-Set-1.jpeg",
+      "/products/sets/Casio-Wristwatch-Set-2.jpeg",
+    ],
+  },
+  {
+    id: 6,
+    name: "Necklace and Earrings Set",
+    price: 25000,
+    category: "Sets",
+    image: "/products/sets/Necklace-and-Earrings-set.jpeg",
+    gallery: [
+      "/products/sets/Necklace-and-Earrings-set-1.jpeg",
+      "/products/sets/Necklace-and-Earrings-set-2.jpeg",
+    ],
   },
 ];
 
@@ -71,4 +98,5 @@ export const collections = [
   { id: 2, name: "Necklaces", image: "/collections/necklaces.jpg" },
   { id: 3, name: "Rings", image: "/collections/rings.jpg" },
   { id: 4, name: "Bracelets", image: "/collections/bracelets.jpg" },
+  { id: 5, name: "Sets", image: "/collections/sets.jpg" }, // new
 ];

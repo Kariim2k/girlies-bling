@@ -10,7 +10,7 @@ export default function Collections() {
           Shop by Collection
         </h2>
 
-        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-5">
           {collections.map((c, i) => (
             <motion.div
               key={c.id}
