@@ -24,9 +24,7 @@ export default function About() {
             extra magic to the way a woman expresses herself. We handpick pieces
             that balance feminine charm with understated luxury, bringing
             together styles that feel beautiful, versatile, and worth reaching
-            for again and again. Every piece is chosen to help you make a
-            statement, whether subtle or bold, without ever losing your personal
-            touch.
+            for again and again.
           </p>
           <p className="mt-3 text-stone-600">
             At Girlies_Bling, every piece is thoughtfully selected with an eye

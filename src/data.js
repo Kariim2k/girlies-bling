@@ -13,6 +13,7 @@ export const navLinks = [
   { label: "Home", to: "/" },
   { label: "Shop", to: "/shop" },
   { label: "Collections", to: "/#collections" },
+  { label: "Services", to: "/#services" },
   { label: "About Us", to: "/#about" },
   { label: "Contact", to: "/#contact" },
 ];
@@ -38,7 +39,7 @@ export const products = [
   },
   {
     id: 2,
-    name: "Naidu lady’s wristwatch",
+    name: "Naidu Lady’s Wristwatch",
     price: 29999,
     category: "Wristwatches",
     image: "/products/wristwatches/Naidu-lady’s-wristwatch.jpeg",
@@ -84,6 +85,17 @@ export const products = [
       "/products/sets/Necklace-and-Earrings-set-2.jpeg",
     ],
   },
+  {
+    id: 7,
+    name: "Heart Necklace",
+    price: 9599,
+    category: "Necklaces",
+    image: "/products/necklaces/Heart-Necklace.jpeg",
+    gallery: [
+      "/products/necklaces/Heart-Necklace-1.jpeg",
+      "/products/necklaces/Heart-Necklace-2.jpeg",
+    ],
+  },
 ];
 
 export const orderLink = (item) =>
@@ -94,9 +106,48 @@ export const orderLink = (item) =>
   )}`;
 
 export const collections = [
-  { id: 1, name: "Earrings", image: "/collections/earrings.jpg" },
-  { id: 2, name: "Necklaces", image: "/collections/necklaces.jpg" },
+  { id: 1, name: "Earrings", image: "/collections/Stud-Earrings.jpeg" },
+  {
+    id: 2,
+    name: "Necklaces",
+    image: "/collections/Heart-Necklace-2.jpeg",
+  },
   { id: 3, name: "Rings", image: "/collections/rings.jpg" },
-  { id: 4, name: "Bracelets", image: "/collections/bracelets.jpg" },
-  { id: 5, name: "Sets", image: "/collections/sets.jpg" }, // new
+  {
+    id: 4,
+    name: "Bracelets",
+    image: "/collections/chunky bracelet.jpeg",
+  },
+  {
+    id: 5,
+    name: "Sets",
+    image: "/collections/Necklace-and-Earrings-set-2.jpeg",
+  },
+];
+
+export const services = [
+  {
+    id: 1,
+    icon: "palette",
+    title: "Custom Pieces",
+    text: "Have something in mind? We'll make it to your design, size and budget.",
+  },
+  {
+    id: 2,
+    icon: "gift",
+    title: "Gift Packaging",
+    text: "Orders can arrive beautifully wrapped and ready to give.",
+  },
+  {
+    id: 3,
+    icon: "truck",
+    title: "Nationwide Delivery",
+    text: "Fast, tracked delivery to any state in Nigeria.",
+  },
+  {
+    id: 4,
+    icon: "wrench",
+    title: "Resizing & Repairs",
+    text: "Need a fit adjustment or a fix? Send us a message.",
+  },
 ];
