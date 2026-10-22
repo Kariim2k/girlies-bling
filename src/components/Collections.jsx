@@ -10,32 +10,43 @@ export default function Collections() {
           Shop by Collection
         </h2>
 
-        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-5">
-          {collections.map((c, i) => (
-            <motion.div
-              key={c.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
-            >
-              <Link
-                to={`/shop/${slugify(c.name)}`}
-                className="group relative block aspect-[4/5] overflow-hidden rounded-xl bg-stone-200"
+        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-5 md:gap-6">
+          {collections.map((c, i) => {
+            // on phones, if the number of cards is odd, the last one spans the full width
+            const wideOnMobile =
+              i === collections.length - 1 && collections.length % 2 === 1;
+
+            return (
+              <motion.div
+                key={c.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
+                className={wideOnMobile ? "col-span-2 md:col-span-1" : ""}
               >
-                <img
-                  src={c.image}
-                  alt={c.name}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <span className="absolute bottom-4 left-4 font-serif text-xl text-white">
-                  {c.name}
-                </span>
-              </Link>
-            </motion.div>
-          ))}
+                <Link
+                  to={`/shop/${slugify(c.name)}`}
+                  className={`group relative block overflow-hidden rounded-xl bg-stone-200 ${
+                    wideOnMobile
+                      ? "aspect-[16/9] md:aspect-[4/5]"
+                      : "aspect-[4/5]"
+                  }`}
+                >
+                  <img
+                    src={c.image}
+                    alt={c.name}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <span className="absolute bottom-4 left-4 font-serif text-xl text-white">
+                    {c.name}
+                  </span>
+                </Link>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
