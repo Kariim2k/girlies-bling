@@ -29,7 +29,7 @@ export const products = [
   {
     id: 1,
     name: "Stud Earrings",
-    price: 7499,
+    price: 5499,
     category: "Earrings",
     image: "/products/earrings/Stud-Earrings.jpeg",
     gallery: [
@@ -53,7 +53,7 @@ export const products = [
     name: "Chunky Bracelet",
     price: 16999,
     category: "Bracelets",
-    image: "/products/bracelets/chunky bracelet.jpeg",
+    image: "/products/bracelets/chunky-bracelet.jpeg",
   },
   {
     id: 4,
@@ -94,6 +94,48 @@ export const products = [
     gallery: [
       "/products/necklaces/Heart-Necklace-1.jpeg",
       "/products/necklaces/Heart-Necklace-2.jpeg",
+    ],
+  },
+  {
+    id: 8,
+    name: "Beaded Bracelet",
+    price: 6999,
+    category: "Bracelets",
+    image: "/products/bracelets/beaded-bracelet.jpeg",
+    gallery: [
+      "/products/bracelets/beaded-bracelet-1.jpeg",
+      "/products/bracelets/beaded-bracelet-2.jpeg",
+    ],
+  },
+  {
+    id: 9,
+    name: "Name customized necklace",
+    price: 7500,
+    category: "Necklaces",
+    image: "/public/products/necklaces/Name-customized-necklace.jpeg",
+    gallery: ["/public/products/necklaces/Name-customized-necklace-1.jpeg"],
+  },
+  {
+    id: 10,
+    name: "Rolex Wristwatch Set",
+    price: 39500,
+    category: "Sets",
+    image: "/public/products/sets/Rolex-wristwatch-set.jpeg",
+    gallery: [
+      "/public/products/sets/Rolex-wristwatch-set-1.jpeg",
+      "/public/products/sets/Rolex-wristwatch-set-2.jpeg",
+      "/public/products/sets/Rolex-wristwatch-set-3.jpeg",
+    ],
+  },
+  {
+    id: 11,
+    name: "Double Stud Earrings",
+    price: 9999,
+    category: "Earrings",
+    image: "/public/products/earrings/Double-Stud-Earrings.jpeg",
+    gallery: [
+      "/public/products/earrings/Double-Stud-Earrings-1.jpeg",
+      "/public/products/earrings/Double-Stud-Earrings-2.jpeg",
     ],
   },
 ];
