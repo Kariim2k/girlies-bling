@@ -170,25 +170,21 @@ export const collections = [
 export const services = [
   {
     id: 1,
-    icon: "palette",
     title: "Custom Pieces",
     text: "Have something in mind? We'll make it to your design, size and budget.",
   },
   {
     id: 2,
-    icon: "gift",
     title: "Gift Packaging",
     text: "Orders can arrive beautifully wrapped and ready to give.",
   },
   {
     id: 3,
-    icon: "truck",
     title: "Nationwide Delivery",
     text: "Fast, tracked delivery to any state in Nigeria.",
   },
   {
     id: 4,
-    icon: "wrench",
     title: "Resizing & Repairs",
     text: "Need a fit adjustment or a fix? Send us a message.",
   },

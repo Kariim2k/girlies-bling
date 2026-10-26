@@ -6,7 +6,7 @@ export default function About() {
       <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-2">
         <div className="aspect-[4/5] overflow-hidden rounded-xl bg-stone-100">
           <img
-            src="/about.jpg"
+            src="/about/about.png"
             alt={`The story behind ${brand.name}`}
             loading="lazy"
             className="h-full w-full object-cover"
