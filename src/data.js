@@ -154,7 +154,7 @@ export const collections = [
     name: "Necklaces",
     image: "/collections/Heart-Necklace-2.jpeg",
   },
-  { id: 3, name: "Rings", image: "/collections/rings.jpg" },
+  { id: 3, name: "Rings", image: "/collections/ring.jpg" },
   {
     id: 4,
     name: "Bracelets",
