@@ -2,7 +2,7 @@ export const slugify = (s) => s.toLowerCase().trim().replace(/\s+/g, "-");
 
 export const brand = {
   name: "Girlies_Bling",
-  logo: "", // e.g. '/logo.png' once you have it, put the file in /public
+  logo: "/logo/gb-logo.png",
   whatsapp: "2348150286791",
   tiktok: "https://tiktok.com/@girlies_bling?_r=1&_t=ZS-9AO6lcDxopx",
   location: "Lagos, Nigeria",
