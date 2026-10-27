@@ -129,7 +129,7 @@ export default function ProductModal({ product, onClose }) {
           </p>
           <button
             onClick={() => {
-              addItem(product);
+              addItem(product, index);
               onClose();
             }}
             className="mt-6 rounded-full bg-stone-900 py-3 text-white transition hover:bg-amber-700"

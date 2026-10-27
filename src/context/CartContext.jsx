@@ -18,21 +18,26 @@ export function CartProvider({ children }) {
     } catch {}
   }, [items]);
 
-  const addItem = (product) => {
+  const addItem = (product, photoIndex = 0) => {
+    const photos = [product.image, ...(product.gallery || [])];
+    const hasOptions = photos.length > 1;
+    const lineId = hasOptions ? `${product.id}-${photoIndex}` : product.id;
+
     setItems((prev) => {
-      const found = prev.find((i) => i.id === product.id);
+      const found = prev.find((i) => i.id === lineId);
       if (found) {
         return prev.map((i) =>
-          i.id === product.id ? { ...i, qty: i.qty + 1 } : i,
+          i.id === lineId ? { ...i, qty: i.qty + 1 } : i,
         );
       }
       return [
         ...prev,
         {
-          id: product.id,
+          id: lineId,
           name: product.name,
           price: product.price,
-          image: product.image,
+          image: photos[photoIndex],
+          option: hasOptions ? photoIndex + 1 : null,
           qty: 1,
         },
       ];
@@ -41,9 +46,9 @@ export function CartProvider({ children }) {
 
   const changeQty = (id, delta) =>
     setItems((prev) =>
-      prev
-        .map((i) => (i.id === id ? { ...i, qty: i.qty + delta } : i))
-        .filter((i) => i.qty > 0),
+      prev.map((i) =>
+        i.id === id ? { ...i, qty: Math.max(1, i.qty + delta) } : i,
+      ),
     );
 
   const removeItem = (id) =>

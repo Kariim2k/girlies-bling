@@ -17,7 +17,10 @@ export default function CartDrawer() {
 
   const checkoutLink = () => {
     const lines = items.map(
-      (i) => `• ${i.qty} x ${i.name} (${formatPrice(i.price * i.qty)})`,
+      (i) =>
+        `• ${i.qty} x ${i.name}${
+          i.option && <p className="text-xs text-stone-500">Photo {i.option}</p>
+        } (${formatPrice(i.price * i.qty)})`,
     );
     const message = `Hi, I'd like to order:\n${lines.join("\n")}\n\nTotal: ${formatPrice(total)}`;
     return `https://wa.me/${brand.whatsapp}?text=${encodeURIComponent(message)}`;
@@ -74,7 +77,8 @@ export default function CartDrawer() {
                         <button
                           aria-label="Decrease quantity"
                           onClick={() => changeQty(i.id, -1)}
-                          className="rounded-full border border-stone-300 p-1"
+                          disabled={i.qty === 1}
+                          className="rounded-full border border-stone-300 p-1 disabled:opacity-40"
                         >
                           <Minus size={14} />
                         </button>
